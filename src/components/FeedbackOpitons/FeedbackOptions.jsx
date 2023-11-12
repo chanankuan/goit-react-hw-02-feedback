@@ -9,9 +9,8 @@ class FeedbackOptions extends Component {
         {this.props.options.map(option => (
           <Button
             key={option}
-            data-option={option}
             option={option}
-            onClick={this.props.onLeaveFeedback}
+            onClick={() => this.props.onLeaveFeedback(option)}
           >
             {option}
           </Button>

@@ -11,9 +11,7 @@ class App extends Component {
     bad: 0,
   };
 
-  onLeaveFeedback = event => {
-    const option = event.target.dataset.option;
-
+  onLeaveFeedback = option => {
     this.setState(prevState => {
       return {
         [option]: prevState[option] + 1,
